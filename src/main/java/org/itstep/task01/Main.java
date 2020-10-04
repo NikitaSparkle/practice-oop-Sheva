@@ -22,7 +22,81 @@ package org.itstep.task01;
  */
 public class Main {
     public static void main(String[] args) {
-        // TODO: Пишите классы в этом пакете
-        // FIXME: здесь пример использования класса
+
+    }
+}
+
+class Human {
+    private String fullName;
+    private int dateofBirth;
+    private int phone;
+    private String city;
+    private String country;
+    private String address;
+
+    Human() {
+        this.fullName = fullName;
+        dateofBirth = 0;
+        phone = 0;
+        this.city = city;
+        this.country = country;
+        this.address = address;
+    }
+
+    Human(String fullName, int dateofBirth, int phone, String city, String country, String address) {
+        this.fullName = fullName;
+        this.dateofBirth = dateofBirth;
+        this.phone = phone;
+        this.city = city;
+        this.country = country;
+        this.address = address;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public int getDateofBirth() {
+        return dateofBirth;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setDateofBirth(int dateofBirth) {
+        this.dateofBirth = dateofBirth;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
