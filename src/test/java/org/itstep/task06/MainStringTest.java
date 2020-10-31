@@ -70,7 +70,7 @@ class MainStringTest {
         Assertions.assertEquals(3, declaredConstructors.length, "Должно быть три конструктора");
 
         // Конструктор со строковым литералом
-        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(String.class);
+        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(CharSequence.class);
 
         Object str = TestUtil.getExpected(String.class);
 
@@ -93,7 +93,7 @@ class MainStringTest {
     @Test
     @DisplayName("Проверка метода length()")
     void length() throws NoSuchMethodException, ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(String.class);
+        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(CharSequence.class);
 
         Object args = TestUtil.getExpected(String.class);
         Object obj = ctor.newInstance(args);
@@ -116,7 +116,7 @@ class MainStringTest {
     @Test
     @DisplayName("Проверка  метода clean()")
     void clean() throws NoSuchMethodException, ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(String.class);
+        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(CharSequence.class);
 
         Object args = TestUtil.getExpected(String.class);
         Object obj = ctor.newInstance(args);
@@ -133,7 +133,7 @@ class MainStringTest {
     @Test
     @DisplayName("Проверка метода concat()")
     void concat() throws NoSuchMethodException, ClassNotFoundException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(String.class);
+        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(CharSequence.class);
 
         Object args1 = TestUtil.getExpected(String.class);
         Object args2 = TestUtil.getExpected(String.class);
@@ -152,7 +152,7 @@ class MainStringTest {
     @Test
     @DisplayName("Проверка  метода indexOf()")
     void indexOf() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(String.class);
+        Constructor<?> ctor = MAIN_STRING_CLAZZ.getDeclaredConstructor(CharSequence.class);
 
         Object obj = ctor.newInstance("test string");
         Method indexOf = MAIN_STRING_CLAZZ.getDeclaredMethod("indexOf", int.class);
